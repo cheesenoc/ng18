@@ -1,0 +1,73 @@
+winget install --id Git.Git -e --source winget
+
+https://nodejs.org/en/download/package-manager
+winget install Schniz.fnm
+fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm use --install-if-missing 20
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+https://angular.dev/tools/cli/setup-local#install-the-angular-cli
+npm install -g @angular/cli
+ng new ng18
+cd .\ng18\
+npm start
+http://localhost:4200/
+
+https://material.angular.io/guide/getting-started
+ng add @angular/material
+
+app.component.ts:
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, MatSlideToggleModule, MatButtonModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'ng18';
+}
+
+app.component.html:
+      <h1>Hello, {{ title }}</h1>
+      <p>Congratulations! Your app is running. 🎉</p>
+      <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+      <button  mat-raised-button>My Button</button>
+
+ng serve
+http://localhost:4200/
+
+https://storybook.js.org/docs/get-started/frameworks/angular?renderer=angular
+npx storybook@latest init
+ng run ng18:storybook
+(wait)
+http://localhost:6006/?path=/story/example-button--primary&onboarding=true
+
+https://storybook.js.org/recipes/@angular/material
+nav-bar.component.ts
+
+nav-bar.stories.ts:
+import type { Meta, StoryObj } from '@storybook/angular';
+import { NavBarComponent } from './nav-bar.component';
+ 
+const meta: Meta<NavBarComponent> = {
+  title: 'MatExample/MatNavBar',
+  component: NavBarComponent,
+};
+ 
+export default meta;
+type Story = StoryObj<NavBarComponent>;
+ 
+export const Default: Story = {
+  args: {
+    pageTitle: 'Example Title',
+  },
+};
+
+
+
+https://medium.com/@iworb/creating-a-custom-material-design-3-theme-in-angular-18-5abea87f0d65
