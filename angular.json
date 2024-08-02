@@ -115,6 +115,7 @@
               "@fontsource/roboto/400.css",
               "@fontsource/roboto/500.css",
               "@fontsource/roboto/700.css",
+              "@fontsource/armata/400.css",
               "@fontsource/material-icons",
               "src/styles.scss"
             ]
@@ -138,6 +139,7 @@
               "@fontsource/roboto/400.css",
               "@fontsource/roboto/500.css",
               "@fontsource/roboto/700.css",
+              "@fontsource/armata/400.css",
               "@fontsource/material-icons",
               "src/styles.scss"
             ],

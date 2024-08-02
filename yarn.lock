@@ -1734,6 +1734,11 @@
   resolved "https://registry.yarnpkg.com/@foliojs-fork/restructure/-/restructure-2.0.2.tgz#73759aba2aff1da87b7c4554e6839c70d43c92b4"
   integrity sha512-59SgoZ3EXbkfSX7b63tsou/SDGzwUEK6MuB5sKqgVK1/XE0fxmpsOb9DQI8LXW3KfGnAjImCGhhEb7uPPAUVNA==
 
+"@fontsource/armata@^5.0.20":
+  version "5.0.20"
+  resolved "https://registry.yarnpkg.com/@fontsource/armata/-/armata-5.0.20.tgz#b7f5f9f713c7ee5677b8737d3e3cfecda8786662"
+  integrity sha512-yCjmrQpW+kyXduCrppprUHt9WZ6vU299d2/lz+2vvkeQJWerZ2L5XDYvDrxm4iU0v/O2GdpulMkD4sZzaw5Ceg==
+
 "@fontsource/material-icons@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/material-icons/-/material-icons-5.0.18.tgz#36cc28b282cba7e0cb90b5afa5c0278233cc6e5d"

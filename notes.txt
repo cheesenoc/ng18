@@ -1,3 +1,17 @@
+figma:
+library: 
+https://www.figma.com/community/file/1035203688168086460
+theme:
+http://material-foundation.github.io?primary=%23007FA7&secondary=%2385CFE8&tertiary=%23002D69&bodyFont=Armata&displayFont=Armata&colorMatch=true
+-> exported to material-theme.json -> imported in figma below using material theme builder plugin
+-> exported css -> folder css -> no use
+guide:
+https://www.figma.com/design/LGv5j7fb0OaBSNzCjWg74H/Personalized-theme-and-brand-with-Material-3-(Community)?node-id=2213-12201&t=dwIUWomAw9JtviCA-4
+
+
+ALWAYS run this first in powershell:
+fnm env --use-on-cd | Out-String | Invoke-Expression  
+
 winget install --id Git.Git -e --source winget
 
 https://nodejs.org/en/download/package-manager
@@ -71,3 +85,30 @@ export const Default: Story = {
 
 
 https://medium.com/@iworb/creating-a-custom-material-design-3-theme-in-angular-18-5abea87f0d65
+-> no use, refers to method below in the end
+
+
+https://material.angular.io/guide/theming#defining-a-theme
+https://github.com/angular/components/blob/main/src/material/schematics/ng-generate/m3-theme/README.md
+PS C:\Users\chees\code\ng18> ng generate @angular/material:m3-theme
+? What HEX color should be used to generate the M3 theme? It will represent your primary color palette. (ex. #ffffff) #007fa7     
+? What HEX color should be used represent the secondary color palette? (Leave blank to use generated colors from Material) #85cfe8
+
+? What HEX color should be used represent the tertiary color palette? (Leave blank to use generated colors from Material) #002d69 
+? What HEX color should be used represent the neutral color palette? (Leave blank to use generated colors from Material)
+? What is the directory you want to place the generated theme file in? (Enter the relative path such as 'src/app/styles/' or leave
+ blank to generate at your project root) src/app/styles/
+? Do you want to use system-level variables in the theme? System-level variables make dynamic theming easier through CSS custom   
+properties, but increase the bundle size. yes
+? Choose light, dark, or both to generate the corresponding themes light
+CREATE src/app/styles/m3-theme.scss (2749 bytes)
+
+edit styles.scss -> use m3-theme.$light-theme for all components used
+add font to m3-theme.scss
+
+font:
+yarn add @fontsource/armata  
+angular.json:
+              "@fontsource/armata/400.css",
+index.html
+  <link href="https://fonts.googleapis.com/css2?family=Armata:wght@400&display=swap" rel="stylesheet">
